@@ -118,28 +118,28 @@ def main_menu():
                 if choice == "1":
                     print("Downloading Wine 9.1 (WoW64)...")
                     print("")
-                    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.1-esync.tar.xz")
+                    os.system("wget -q --show-progress https://hub.gitmirror.com/https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.1-esync.tar.xz")
                     print("")
                     print("Unpacking Wine 9.1...")
                     os.system("tar -xf wine-9.1-esync.tar.xz -C $PREFIX/glibc/opt")
                 elif choice == "2":
                     print("Downloading Wine 9.2 (WoW64)...")
                     print("")
-                    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.2-amd64-wow64.tar.xz")
+                    os.system("wget -q --show-progress https://hub.gitmirror.com/https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.2-amd64-wow64.tar.xz")
                     print("")
                     print("Unpacking Wine 9.2 (WoW64)...")
                     os.system("tar -xf wine-9.2-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
                 elif choice == "3":
                     print("Downloading Wine 9.4 (WoW64)...")
                     print("")
-                    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.4-amd64-wow64.tar.xz")
+                    os.system("wget -q --show-progress https://hub.gitmirror.com/https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.4-amd64-wow64.tar.xz")
                     print("")
                     print("Unpacking Wine 9.4 (WoW64)...")
                     os.system("tar -xf wine-9.4-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
                 elif choice == "4":
                     print("Downloading Wine 9.5 (WoW64)...")
                     print("")
-                    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.5-amd64-wow64.tar.xz")
+                    os.system("wget -q --show-progress https://hub.gitmirror.com/https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.5-amd64-wow64.tar.xz")
                     print("")
                     print("Unpacking Wine 9.5 (WoW64)...")
                     os.system("tar -xf wine-9.5-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
@@ -151,7 +151,7 @@ def main_menu():
         recreate_prefix()
         create_prefix()
     elif choice == "5":
-        os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/checkupdates.py &>/dev/null && mv checkupdates.py $PREFIX/bin")
+        os.system("wget https://cdn.gitmirror.com/gh/Ilya114/Box64Droid/main/scripts/native/checkupdates.py &>/dev/null && mv checkupdates.py $PREFIX/bin")
         os.system("python3 $PREFIX/bin/checkupdates.py")
     elif choice == "6":
         os.system("clear")
@@ -189,7 +189,7 @@ def start():
         os.system("rm $PREFIX/bin/box64droid.py")
         os.system("rm $PREFIX/bin/start-box64.py")
     elif sys.argv[1] == "--reinstall":
-        os.system("curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/install.sh && chmod +x install && ./install")
+        os.system("curl -o install https://cdn.gitmirror.com/gh/Ilya114/Box64Droid/main/installers/install.sh && chmod +x install && ./install")
     elif sys.argv[1] == "--version":
         print("18.03.24")
     elif sys.argv[1] == "--help":
