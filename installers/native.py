@@ -13,13 +13,13 @@ def check_prev_version():
     if os.path.exists(config):
         shutil.rmtree(config)
 def install_glibc():
-    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/glibc-prefix.tar.xz")
+    os.system("wget -q --show-progress https://hub.gitmirror.com/https://github.com/Ilya114/Box64Droid/releases/download/alpha/glibc-prefix.tar.xz")
     os.system("tar -xJf glibc-prefix.tar.xz -C $PREFIX/")
 def scripts():
-    os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/box64droid &>/dev/null")
-    os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/box64droid.py &>/dev/null")
-    os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/start-box64.py &>/dev/null")
-    os.system("wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks &>/dev/null")
+    os.system("wget https://cdn.gitmirror.com/gh/Ilya114/Box64Droid/main/scripts/native/box64droid &>/dev/null")
+    os.system("wget https://cdn.gitmirror.com/gh/Ilya114/Box64Droid/main/scripts/native/box64droid.py &>/dev/null")
+    os.system("wget https://cdn.gitmirror.com/gh/Ilya114/Box64Droid/main/scripts/native/start-box64.py &>/dev/null")
+    os.system("wget https://cdn.gitmirror.com/gh/Winetricks/winetricks/master/src/winetricks &>/dev/null")
     os.system("chmod +x box64droid winetricks")
     os.system("mv box64droid box64droid.py start-box64.py winetricks $PREFIX/bin/")
     os.system("ln -s $PREFIX/glibc/opt/wine/bin/wine $PREFIX/glibc/bin/wine")
